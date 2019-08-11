@@ -36,47 +36,47 @@ class IMCDetailViewController: UIViewController {
         let weight : Double = Double(self.weight) ?? 0.0
         
         let imc = weight / (height * height)
-        lbIMC.text = String(imc)
+        lbIMC.text = String(imc.rounded(.towardZero))
         setIMCDescription(imc)
     }
 
     func setIMCDescription(_ imc: Double) {
-        let desc = isMale ? getIMCMaleStatus(imc) : getIMCFamaleStatus(imc)
+        let imcDesc: (imageName: String, imcDesc: String)  = isMale ? getIMCMaleStatus(imc) : getIMCFamaleStatus(imc)
         
-        lbIMSDesc.text = desc.uppercased()
+        lbIMSDesc.text = imcDesc.imcDesc
         
-        ivIMC.image = UIImage(named: isMale ? "masc_\(desc)" : "fem_\(desc)")
+        ivIMC.image = UIImage(named: imcDesc.imageName)
         
     }
     
-    func getIMCFamaleStatus(_ imc: Double) -> String {
+    func getIMCFamaleStatus(_ imc: Double) -> (String, String) {
         
         switch imc {
         case ..<19:
-            return "abaixo"
+            return ("fem_abaixo", "Abaixo do peso")
         case 19..<23.9:
-            return "ideal"
+            return ("fem_ideal", "Peso ideal")
         case 24..<28.9:
-            return "sobre"
+            return ("fem_sobre", "Obesidade leve")
         case 29..<38.9:
-            return "obeso"
+            return ("fem_obeso", "Obesidade moderada")
         default:
-            return "extremo_obeso"
+            return ("fem_extremo_obeso", "Obesidade mórbida")
         }
     }
     
-    func getIMCMaleStatus(_ imc: Double) -> String {
+    func getIMCMaleStatus(_ imc: Double) -> (String, String) {
         switch imc {
         case ..<20:
-            return "abaixo"
+            return ("masc_abaixo", "Abaixo do peso")
         case 20..<24.9:
-            return "ideal"
+            return ("masc_ideal", "Peso ideal")
         case 25..<29.9:
-            return "sobre"
+            return ("masc_sobre", "Obesidade leve")
         case 30..<39.9:
-            return "obeso"
+            return ("masc_obeso", "Obesidade moderada")
         default:
-            return "extremo_obeso"
+            return ("masc_extremo_obeso", "Obesidade mórbida")
         }    }
     
     /*
