@@ -24,20 +24,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu peso em kg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-mC-f7F">
-                                <rect key="frame" x="48" y="284" width="319" height="40"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 1.92" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-IB-9k0">
+                                <rect key="frame" x="48" y="432" width="319" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua altura em m" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-IB-9k0">
-                                <rect key="frame" x="48" y="387" width="319" height="40"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-xy-kHl">
-                                <rect key="frame" x="48" y="486" width="204" height="29"/>
+                                <rect key="frame" x="48" y="531" width="204" height="29"/>
                                 <segments>
                                     <segment title="Masculino"/>
                                     <segment title="Feminino"/>
@@ -47,8 +41,8 @@
                                     <action selector="ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="myo-3s-efY"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVR-ba-NJs">
-                                <rect key="frame" x="88" y="623" width="238" height="60"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVR-ba-NJs">
+                                <rect key="frame" x="88" y="679" width="238" height="60"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.19508948640000001" blue="0.1838539303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yxV-v1-GcS"/>
@@ -61,6 +55,24 @@
                                     <segue destination="zQD-Kx-rB9" kind="show" id="zPA-cv-XBY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Peso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5U-Bm-aLq">
+                                <rect key="frame" x="48" y="298" width="68" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Altura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyi-YM-7lZ">
+                                <rect key="frame" x="48" y="392" width="82" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 87" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-mC-f7F">
+                                <rect key="frame" x="48" y="338" width="319" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.64313725490196072" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,7 +82,9 @@
                             <constraint firstItem="5Ol-mC-f7F" firstAttribute="leading" secondItem="p61-05-Muf" secondAttribute="leading" id="DJC-sN-CVc"/>
                             <constraint firstItem="gaI-IB-9k0" firstAttribute="trailing" secondItem="5Ol-mC-f7F" secondAttribute="trailing" id="DX5-wU-Y7W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SVR-ba-NJs" secondAttribute="bottom" constant="179" id="DgT-8G-JEy"/>
+                            <constraint firstItem="n5U-Bm-aLq" firstAttribute="leading" secondItem="5Ol-mC-f7F" secondAttribute="leading" id="EOy-gU-mGf"/>
                             <constraint firstItem="SVR-ba-NJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="GoT-2i-O80"/>
+                            <constraint firstItem="n5U-Bm-aLq" firstAttribute="leading" secondItem="cyi-YM-7lZ" secondAttribute="leading" id="H5u-rG-Q0e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SVR-ba-NJs" secondAttribute="trailing" constant="88" id="LI2-4d-iZM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="USZ-xy-kHl" secondAttribute="trailing" constant="162" id="LpB-42-NM6"/>
                             <constraint firstItem="SVR-ba-NJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="Oiv-hc-TKd"/>
@@ -79,7 +93,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p61-05-Muf" secondAttribute="trailing" constant="52" id="a2F-jg-pgg"/>
                             <constraint firstItem="p61-05-Muf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="bqh-dQ-MPY"/>
                             <constraint firstItem="gaI-IB-9k0" firstAttribute="top" secondItem="5Ol-mC-f7F" secondAttribute="bottom" constant="63" id="dKh-aJ-SXl"/>
+                            <constraint firstItem="gaI-IB-9k0" firstAttribute="top" secondItem="cyi-YM-7lZ" secondAttribute="bottom" constant="8" symbolic="YES" id="dYz-r4-hHQ"/>
                             <constraint firstItem="SVR-ba-NJs" firstAttribute="top" secondItem="USZ-xy-kHl" secondAttribute="bottom" constant="109" id="jLY-4I-tps"/>
+                            <constraint firstItem="n5U-Bm-aLq" firstAttribute="top" secondItem="p61-05-Muf" secondAttribute="bottom" constant="8" symbolic="YES" id="jts-eQ-fX4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SVR-ba-NJs" secondAttribute="bottom" constant="179" id="mP6-fP-bLb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p61-05-Muf" secondAttribute="bottom" constant="633" id="qdj-r1-tKX"/>
                             <constraint firstItem="USZ-xy-kHl" firstAttribute="top" secondItem="gaI-IB-9k0" secondAttribute="bottom" constant="59" id="vmf-uI-pSU"/>

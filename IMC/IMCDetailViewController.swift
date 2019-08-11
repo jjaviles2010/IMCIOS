@@ -36,7 +36,7 @@ class IMCDetailViewController: UIViewController {
         let weight : Double = Double(self.weight) ?? 0.0
         
         let imc = weight / (height * height)
-        lbIMC.text = String(imc.rounded(.towardZero))
+        lbIMC.text = String(format: "%.2f", imc)
         setIMCDescription(imc)
     }
 
