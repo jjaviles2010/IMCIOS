@@ -12,6 +12,7 @@
 		8222D2A022FF9B8A001B3C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8222D29E22FF9B8A001B3C97 /* Main.storyboard */; };
 		8222D2A222FF9B8D001B3C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8222D2A122FF9B8D001B3C97 /* Assets.xcassets */; };
 		8222D2A522FF9B8D001B3C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8222D2A322FF9B8D001B3C97 /* LaunchScreen.storyboard */; };
+		8222D2AD22FFA59F001B3C97 /* IMCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222D2AC22FFA59F001B3C97 /* IMCDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8222D2A122FF9B8D001B3C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8222D2A422FF9B8D001B3C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8222D2A622FF9B8D001B3C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8222D2AC22FFA59F001B3C97 /* IMCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				8222D29A22FF9B8A001B3C97 /* AppDelegate.swift */,
 				8222D29C22FF9B8A001B3C97 /* ViewController.swift */,
 				8222D29E22FF9B8A001B3C97 /* Main.storyboard */,
+				8222D2AC22FFA59F001B3C97 /* IMCDetailViewController.swift */,
 				8222D2A122FF9B8D001B3C97 /* Assets.xcassets */,
 				8222D2A322FF9B8D001B3C97 /* LaunchScreen.storyboard */,
 				8222D2A622FF9B8D001B3C97 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8222D2AD22FFA59F001B3C97 /* IMCDetailViewController.swift in Sources */,
 				8222D29D22FF9B8A001B3C97 /* ViewController.swift in Sources */,
 				8222D29B22FF9B8A001B3C97 /* AppDelegate.swift in Sources */,
 			);

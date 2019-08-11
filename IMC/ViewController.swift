@@ -10,9 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var tfWeight: UITextField!
+    
+    @IBOutlet weak var tfHeight: UITextField!
+    
+    @IBOutlet weak var scGender: UISegmentedControl!
+    
+    @IBOutlet weak var btCalculate: UIButton!
+    
+    
+    // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
 
