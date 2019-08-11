@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btCalculate: UIButton!
     
+    // MARK: - Properties
+    var isMale: Bool = true
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -32,7 +34,20 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let vcIMCDetails = segue.destination as? IMCDetailViewController
+        
+        vcIMCDetails?.weight = tfWeight.text ?? ""
+        vcIMCDetails?.height = tfHeight.text ?? ""
+        vcIMCDetails?.isMale = isMale
 
+    }
 
+    @IBAction func ValueChanged(_ sender: UISegmentedControl) {
+       isMale = scGender.selectedSegmentIndex == 0
+    }
+    
 }
 

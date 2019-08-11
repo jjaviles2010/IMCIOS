@@ -43,6 +43,9 @@
                                     <segment title="Feminino"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="myo-3s-efY"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVR-ba-NJs">
                                 <rect key="frame" x="88" y="623" width="238" height="60"/>
@@ -98,7 +101,7 @@
         <!--IMC Details-->
         <scene sceneID="EeQ-cz-Qco">
             <objects>
-                <viewController id="zQD-Kx-rB9" sceneMemberID="viewController">
+                <viewController id="zQD-Kx-rB9" customClass="IMCDetailViewController" customModule="IMC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZyA-jW-MAQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,6 +166,11 @@
                         <viewLayoutGuide key="safeArea" id="D3R-oA-Nyz"/>
                     </view>
                     <navigationItem key="navigationItem" title="IMC Details" id="Ir7-qv-QpK"/>
+                    <connections>
+                        <outlet property="ivIMC" destination="jqe-Ah-etR" id="oEL-He-xfP"/>
+                        <outlet property="lbIMC" destination="0zz-Ip-42D" id="V4G-aH-NZP"/>
+                        <outlet property="lbIMSDesc" destination="yGw-6k-AdO" id="7J4-1C-1bJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpt-ZO-foV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
