@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tfHeight.layer.cornerRadius = 8
+        tfWeight.layer.cornerRadius = 8
+        btCalculate.layer.cornerRadius = 15
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

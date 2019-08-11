@@ -9,6 +9,9 @@
 import UIKit
 
 class IMCDetailViewController: UIViewController {
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
